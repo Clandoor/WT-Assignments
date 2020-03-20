@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Assignment 5 </title>
+        <link rel="stylesheet" href="formStyle.css">
+        <script type="text/javascript">
+
+            function noInputValidation() {
+                var firName = document.getElementById("firstName");
+                var lasName = document.getElementById("lastName");
+                var nationality = document.getElementById("nationality");
+                var email = document.getElementById("email");
+                var phoneNo = document.getElementById("phone");
+
+                if(firName.value == "" || lasName.value == "" || nationality.value == "" || email.value == "" || phoneNo.value == ""){
+                    alert("Every Field with * is Mandatory.");
+                }
+
+                else{
+                    
+                }
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <form class="submission-form" onsubmit="noInputValidation()" action="connect.php" method="POST">
+            <h2 id="header"> <center> National Workshop on Web Technology </center> </h2>
+            <h3 id="miniheader">  <center> Registration Form </center> </h3>
+
+            <label for="firstName">
+                First Name <mark>*</mark>
+            </label>
+            <input type="text" id="firstName" name="fname">
+            
+            <label for="lastName">
+                Last Name <mark>*</mark>
+            </label>
+            <input type="text" id="lastName" name="lname">
+
+            <label for="position">
+                Post <mark>*</mark>
+            </label>
+            <select name="pos">
+                <option selected hidden value=""> Student </option>
+                <option value="Faculty"> Faculty </option>     
+                <option value="Representative"> Representative </option>
+                <option value="Other"> Other </option>
+            </select>
+
+            <label for="birthdate">
+                 Birthdate <mark>*</mark>
+            </label>
+            <input type="date" id="birthdate" name="bdate">
+
+            <label for="nationality">
+                Nationality <mark>*</mark>
+            </label>
+            <input type="text" id="nationality" name="nation">
+
+            <label for="email">
+                Email <mark>*</mark>
+            </label>
+            <input type="email" id="email" name="mail">
+
+            <label for="phone">
+                Phone <mark>*</mark>
+            </label>
+            <input type="tel" id="phone" name="phno">
+
+            <label for="message">
+                Message
+            </label>
+            <textarea name="message" id="message" name="msg"></textarea>
+
+            <input type="submit" value="Submit" id="submitBtn">
+        </form>
+    </body>
+</html>
